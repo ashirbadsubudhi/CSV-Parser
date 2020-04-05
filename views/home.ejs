@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>Home!!</h2>
+        <form action="/uploads/file" enctype="multipart/form-data" method="POST">
+            <input type="file" name="csv" placeholder="upload file">
+            <input type="submit" value="upload file"> 
+        </form>
+
+        <div>
+            <% for (let i of data){%>
+                <a href='<%= i.fileName%>'><%= i.fileName%></a>  <br>
+            <%}%>
+        </div>
+
+    </body>
+</html>
